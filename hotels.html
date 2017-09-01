@@ -26,17 +26,111 @@
         </header>
         <main>
             <section class="hotels-search-frm">
-                
+                <fieldset class="hotels-search-frm__structure">
+                    <legend>Инфраструктура:</legend>
+                    <label>
+                        <input type="checkbox" name="pool" checked>Бассейн
+                    </label>
+                    <label>
+                        <input type="checkbox" name="parking">Парковка
+                    </label>
+                    <label>
+                        <input type="checkbox" name="wifi">Wi-Fi
+                    </label>
+                </fieldset>
+                <fieldset class="hotels-search-frm__hotel-type">
+                    <legend>Тип жилья:</legend>
+                    <label>
+                        <input type="checkbox" name="hotel" checked>Гостиница
+                    </label>
+                    <label>
+                        <input type="checkbox" name="motel" checked>Мотель
+                    </label>
+                    <label>
+                        <input type="checkbox" name="apartment" checked>Апартаменты
+                    </label>
+                </fieldset>
+                <fieldset class="hotels-search-frm__price">
+                    <legend>Стоимость в сутки (р):</legend>
+                    <div class="hotels-search-frm__price__range">
+                        <span>От 0</span>
+                        <span>До 3000</span>
+                    </div>
+                    <input type="range" min="0" max="3000">
+                    <button type="submit" class="hotels-search-frm__btn">Показать</button>
+                </fieldset>
             </section>
             <section class="hotels-sort">
-                
+                <span class="hotels-sort__count">Найдено: 3</span>
+                <div class="hotels-sort__sort">
+                    <span class="hotels-sort__sort__title">Сортировка:</span>
+                    <ul class="hotels-sort__sort__type">
+                        <li>
+                            <a href="#">по цене</a>
+                        </li>
+                        <li>
+                            <a href="#">по типу</a>
+                        </li>
+                        <li>
+                            <a href="#">по рейтингу</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hotels-sort__direction">
+                    <!--Все изображения не контент -->
+                    <ul class="hotels-sort__direction__list">
+                        <li>
+                            <a href="#"><img src="http://placehold.it/10x10" alt="по возрастанию"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="http://placehold.it/10x10" alt="по убыванию"></a>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="hotels-result">
                 <ul class="hotels-result__list">
                     <li>
-                        <h3>Amara resort & spa</h3>
-                        <img src="http://placehold.it/200x100" alt="Amara resort & spa">
-                        
+                        <h3>Amara Resort & Spa</h3>
+                        <img src="http://placehold.it/200x100" alt="Amara Resort & Spa">
+                        <div class="hotels-result__info">
+                            <span class="hotels-result__hotel-type">Гостиница</span>
+                            <span class="hotels-result__hotel-price">от 3500 р.</span>
+                            <a href="#" class="hotels-result__more-btn">Подробнее</a>
+                            <a href="#" class="hotels-result__booking-btn">Забронировать</a>
+                        </div>
+                        <div class="hotels-result__rate">
+                            <span class="hotels-result__rate__star four-stars">4 звезды</span>
+                            <span class="hotels-result__rate__user">Рейтинг: 8,5</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Desert Quail Inn</h3>
+                        <img src="http://placehold.it/200x100" alt="Desert Quail Inn">
+                        <div class="hotels-result__info">
+                            <span class="hotels-result__hotel-type">Мотель</span>
+                            <span class="hotels-result__hotel-price">от 2000 р.</span>
+                            <a href="#" class="hotels-result__more-btn">Подробнее</a>
+                            <a href="#" class="hotels-result__booking-btn">Забронировать</a>
+                        </div>
+                        <div class="hotels-result__rate">
+                            <span class="hotels-result__rate__star two-stars">2 звезды</span>
+                            <span class="hotels-result__rate__user">Рейтинг: 8,9</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Villas at Poco Diablo</h3>
+                        <img src="http://placehold.it/200x100" alt="Villas at Poco Diablo">
+                        <div class="hotels-result__info">
+                            <span class="hotels-result__hotel-type">Апартаменты</span>
+                            <span class="hotels-result__hotel-price">от 4000 р.</span>
+                            <a href="#" class="hotels-result__more-btn">Подробнее</a>
+                            <a href="#" class="hotels-result__booking-btn">Забронировать</a>
+                        </div>
+                        <div class="hotels-result__rate">
+                            <span class="hotels-result__rate__star three-stars">3 звезды</span>
+                            <span class="hotels-result__rate__user">Рейтинг: 9,2</span>
+                        </div>
                     </li>
                 </ul>
             </section>
