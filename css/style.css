@@ -451,10 +451,55 @@ a {
     border-bottom: none;
 }
 
-/* Заголовки hotels */
-.hotel-title {
+.hotel-title a {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     color: #000000;
+}
+
+.hotel-title a:hover,
+.hotel-title a:focus {
+    color: #81b3d2;
+}
+
+.hotel-title a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel-more-btn {
+    font-weight:  bold;
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+
+.hotel-more-btn:hover,
+.hotel-more-btn:focus {
+    background-color: #669ec0;
+}
+
+.hotel-more-btn:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
+
+.hotel-booking-btn {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #766357;
+}
+
+.hotel-booking-btn:hover,
+.hotel-booking-btn:focus {
+    background-color: #604e43;
+}
+
+.hotel-booking-btn:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+.hotel-rate-user {
+    color: #666666;
+    background-color: #f2f2f2;
 }
