@@ -98,7 +98,7 @@
                     <b>Заинтересовались?</b>
                     <p class="booking-summary">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                     <a href="#" class="booking-btn">Поиск гостиницы в Седоне</a>
-                    <form method="get" action="https://echo.htmlacademy.ru" class="booking-search-frm">
+                    <form method="get" action="https://echo.htmlacademy.ru" class="booking-search-frm form-show">
                         <p class="booking-search-frm-container">
                             <label for="date-begin-input">Дата заезда:</label>
                             <span class="booking-search-frm-input-wrapper">
@@ -122,17 +122,17 @@
                         <p class="booking-search-frm-container">
                             <label for="adults-input">Взрослые:</label>
                             <span class="booking-search-frm-number-wrapper">
-                                <button class="booking-search-frm-minus-btn" type="button">&minus;</button>
+                                <button class="booking-search-frm-minus-btn adults-minus" type="button">&minus;</button>
                                 <input id="adults-input" type="number" name="adults-count" value="2" min="0">
-                                <button class="booking-search-frm-plus-btn" type="button">&plus;</button>
+                                <button class="booking-search-frm-plus-btn adults-plus" type="button">&plus;</button>
                             </span>
                         </p>
                         <p class="booking-search-frm-container">
                             <label for="children-input">Дети:</label>
                             <span class="booking-search-frm-number-wrapper">
-                                <button class="booking-search-frm-minus-btn" type="button">&minus;</button>
+                                <button class="booking-search-frm-minus-btn children-minus" type="button">&minus;</button>
                                 <input id="children-input" type="number" name="children-count" value="0" min="0">
-                                <button class="booking-search-frm-plus-btn" type="button">&plus;</button>
+                                <button class="booking-search-frm-plus-btn children-plus" type="button">&plus;</button>
                             </span>
                         </p>
                         <p class="booking-search-frm-container">
@@ -142,6 +142,7 @@
                 </section>
                 <section class="booking-map">
                     <h2 class="visually-hidden">Интерактивная карта</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.888095118!2d-112.35544163071201!3d34.854373381081935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1505050049694" width="1200" height="593" frameborder="0" allowfullscreen></iframe>
                     <img src="img/map.jpg" alt="Интерактивная карта" width="1200" height="593">
                 </section>
             </main>
@@ -171,5 +172,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/script.js" ></script>
     </body>
 </html>

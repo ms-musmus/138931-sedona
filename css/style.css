@@ -353,10 +353,11 @@ p.reasons-number {
     box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
     
     position: absolute;
+    z-index: 4;
     top: 100%;
     left: 316px;
     width: 568px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     padding: 55px;
     box-sizing: border-box;
@@ -526,15 +527,81 @@ p.reasons-number {
     background-color: #5495bd;
 }
 
+@keyframes show {
+  0% {
+    transform: translateY(2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.form-show {
+    display: flex;
+    
+    animation: show 0.6s;    
+}
+
+.form-error {
+    animation: shake 0.6s;
+}
+
 .booking-map {
     height: 473px;
-    overflow: hidden;
+    position: relative;
+}
+
+.booking-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.booking-map iframe {
+    border: none;
+    
+    position: relative;
+    z-index: 2;
 }
 
 .main-footer {
     background-color: rgba(253, 253, 253, 0.9);
     
     display: flex;
+    position: relative;
+    z-index: 3;
 }
 
 .main-footer > div {
