@@ -93,6 +93,11 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
 }
 
+/* Для pixel-perfect */
+.main-navigation-nav li:nth-child(3) {
+    letter-spacing: 0.5px;
+}
+
 .main-navigation-nav a {
     line-height: 26px;
     font-weight: bold;
