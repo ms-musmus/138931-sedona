@@ -34,7 +34,8 @@ input[type="radio"].visually-hidden {
 
     white-space: nowrap;
 
-    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -42,7 +43,8 @@ input[type="radio"].visually-hidden {
 /* ----- Главная страница ----- */
 
 .site-wrapper {
-    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
     
     width: 1200px;
     padding: 0;
@@ -68,9 +70,14 @@ input[type="radio"].visually-hidden {
     
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .main-navigation-nav li {
@@ -169,6 +176,10 @@ input[type="radio"].visually-hidden {
 .reasons-big {
     background-color: #81b3d1;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
 }
 
@@ -176,7 +187,8 @@ input[type="radio"].visually-hidden {
     text-align: center;
     
     width: 400px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 46px;
     padding-right: 46px;
     padding-top: 48px;
@@ -217,13 +229,16 @@ p.reasons-number {
     
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .reasons-features-list li {
     width: 400px;
     position: relative;  
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;  
+            box-sizing: border-box;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -277,6 +292,8 @@ p.reasons-number {
     text-align: center;
     
     height: 256px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -307,6 +324,7 @@ p.reasons-number {
     line-height: 36px;
     font-weight: bold;
     color: #000000;
+    vertical-align: baseline;
     
     display: inline-block;
     margin-top: 52px;
@@ -350,7 +368,8 @@ p.reasons-number {
     color: #000000;
     
     background-color: #ffffff;
-    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+    -webkit-box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+            box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
     
     position: absolute;
     z-index: 4;
@@ -358,19 +377,29 @@ p.reasons-number {
     left: 316px;
     width: 568px;
     display: none;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 55px;
-    box-sizing: border-box;
-    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .booking-search-frm-container {
     width: 100%;
     margin-top: 0;
     margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .booking-search-frm-container:nth-child(3) {
@@ -410,7 +439,8 @@ p.reasons-number {
 }
 
 .booking-search-frm-input-wrapper input {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
     height: 38px;
     padding-left: 12px;
@@ -468,6 +498,8 @@ p.reasons-number {
 
 .booking-search-frm-number-wrapper {
     width: 114px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -499,12 +531,14 @@ p.reasons-number {
     
     width: 38px;
     height: 38px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .booking-search-frm .booking-search-frm-btn {
     font-size: 21px;
     color: #ffffff;
+    vertical-align: baseline;
     
     background-color: #81b3d1;
     
@@ -527,54 +561,112 @@ p.reasons-number {
     background-color: #5495bd;
 }
 
+@-webkit-keyframes show {
+    0% {
+        -webkit-transform: translateY(2000px);
+                transform: translateY(2000px);
+    }
+
+    70% {
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
 @keyframes show {
-  0% {
-    transform: translateY(2000px);
-  }
+    0% {
+        -webkit-transform: translateY(2000px);
+                transform: translateY(2000px);
+    }
 
-  70% {
-    transform: translateY(30px);
-  }
+    70% {
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
 
-  90% {
-    transform: translateY(-10px);
-  }
+    90% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
 
-  100% {
-    transform: translateY(0);
-  }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
 }
 
 @keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
 
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
 }
 
 .form-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     
-    animation: show 0.6s;    
+    -webkit-animation: show 0.6s;
+            animation: show 0.6s;    
 }
 
 .form-error {
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
 }
 
 .booking-map {
@@ -598,6 +690,10 @@ p.reasons-number {
 
 .main-footer {
     background-color: rgba(253, 253, 253, 0.9);
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
     
     display: flex;
     position: relative;
@@ -634,9 +730,14 @@ p.reasons-number {
     
     padding: 0;    
     width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 0 auto;
 }
 
@@ -647,9 +748,15 @@ p.reasons-number {
     
     width: 46px;
     height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 
@@ -686,9 +793,17 @@ p.reasons-number {
     line-height: 26px;
     color: #000000;
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
 }
 
@@ -738,6 +853,8 @@ p.reasons-number {
 }
 
 .hotels-search-frm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 72px;
     padding-right: 72px;
@@ -751,16 +868,26 @@ p.reasons-number {
 .hotels-search-frm-structure {
     width: 150px;
     margin-right: 104px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .hotels-search-frm-hotel-type {
     width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .hotels-search-frm-structure-title {
@@ -857,7 +984,9 @@ p.reasons-number {
     content: "";
     
     background: #ffffff;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     
     position: absolute;
     top: 50%;
@@ -919,7 +1048,8 @@ p.reasons-number {
     background-color: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+            box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
     
     position: absolute;
@@ -953,7 +1083,8 @@ p.reasons-number {
     cursor: pointer;
     
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-left: 85px;
     width: 139px;
     padding: 6px 35px;
@@ -972,6 +1103,8 @@ p.reasons-number {
 }
 
 .hotels-sort {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 86px;
     padding-left: 72px;
@@ -996,8 +1129,12 @@ p.reasons-number {
     
     width: 353px;
     margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .hotels-sort-title {
@@ -1009,8 +1146,11 @@ p.reasons-number {
     
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .hotels-sort-type li {
@@ -1051,8 +1191,12 @@ p.reasons-number {
     
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 /* Для IE */
@@ -1098,11 +1242,18 @@ p.reasons-number {
 }
 
 .hotels-result {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .hotels-result-hotel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 72px;
     padding-right: 72px;
@@ -1120,9 +1271,16 @@ p.reasons-number {
     margin-top: 24px;
     margin-bottom: 30px;
     width: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .hotel-title {
@@ -1149,6 +1307,8 @@ p.reasons-number {
 .hotel-info p {
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1215,9 +1375,16 @@ p.reasons-number {
     margin-left: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .star {
