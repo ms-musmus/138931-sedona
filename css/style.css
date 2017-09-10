@@ -75,8 +75,8 @@ input[type="radio"].visually-hidden {
 
 .main-navigation-nav li {
     width: 240px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 14px;
+    padding-bottom: 16px;
 }
 
 .main-navigation-nav li:nth-child(4n+1),
@@ -191,6 +191,7 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     
     margin: 0;
+    padding: 0;
 }
 
 p.reasons-number {
@@ -705,9 +706,13 @@ p.reasons-number {
     cursor: pointer;
     
     width: 100%;
-    margin-top: 22px;
+    margin-top: 25px;
     padding-left: 40px;
     position: relative;
+}
+
+.hotels-search-frm-hotel-type label {
+    padding-left: 41px;
 }
 
 .hotels-search-frm input[type="checkbox"] + .checkbox-indicator {
